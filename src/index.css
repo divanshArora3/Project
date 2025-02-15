@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes slideDown1 {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}
+
+@keyframes slideDown2 {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(300%); }
+}
+
+@keyframes slideDown3 {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(250%); }
+}
+
+@keyframes slideRight1 {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes slideRight2 {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+
+.animate-slide-down-1 {
+  animation: slideDown1 8s linear infinite;
+}
+
+.animate-slide-down-2 {
+  animation: slideDown2 12s linear infinite;
+}
+
+.animate-slide-down-3 {
+  animation: slideDown3 10s linear infinite;
+}
+
+.animate-slide-right-1 {
+  animation: slideRight1 15s linear infinite;
+}
+
+.animate-slide-right-2 {
+  animation: slideRight2 18s linear infinite;
+}
