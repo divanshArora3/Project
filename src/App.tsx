@@ -20,7 +20,7 @@ function App() {
       </div>
 
       {/* Navigation Menu */}
-      <div className="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-4 bg-gray-800/50 p-3 rounded-full shadow-lg backdrop-blur-sm z-50">
+      <div className="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-4 bg-gray-800/50 p-3 rounded-full shadow-lg backdrop-blur-sm z-50 md:right-8 md:gap-6">
         <button 
           onClick={() => setCurrentPage('home')}
           className={`p-2 rounded-full transition-all ${currentPage === 'home' ? 'bg-cyan-500/20 text-cyan-400' : 'hover:bg-gray-700/50 text-gray-400 hover:text-white'}`}
@@ -49,18 +49,19 @@ function App() {
         >
           <FolderGit2 size={24} />
         </button>
-       
       </div>
 
       {/* Page Content */}
-      {currentPage === 'home' && <Home />}
-      {currentPage === 'skills' && <Skills />}
-      {currentPage === 'education' && <Education />}
-      {currentPage === 'projects' && <Projects />}
+      <div className="px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32">
+        {currentPage === 'home' && <Home />}
+        {currentPage === 'skills' && <Skills />}
+        {currentPage === 'education' && <Education />}
+        {currentPage === 'projects' && <Projects />}
+      </div>
 
       {/* Footer */}
-      <footer className="bg-gray-800/50 backdrop-blur-sm text-gray-300 py-8 relative">
-        <div className="max-w-5xl mx-auto px-4 text-center">
+      <footer className="bg-gray-800/50 backdrop-blur-sm text-gray-300 py-8 relative text-center px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32">
+        <div className="max-w-5xl mx-auto">
           <p>© {new Date().getFullYear()} Divansh Arora. All rights reserved.</p>
         </div>
       </footer>
